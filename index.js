@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3977;
 app.use(bodyParse.urlencoded({ extended: true }));
 app.use(bodyParse.json());
 
-app.get("/", async (req, res) => {
+app.get("/database", async (req, res) => {
     ejemploInsertarDatos();
       try {
         res.status(200).json({ status: 'OK', message: 'Correo enviado' });
