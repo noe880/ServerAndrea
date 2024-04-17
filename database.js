@@ -34,28 +34,12 @@ function insertarDatos(nombre, apellido, email) {
         console.error('Error inserting data:', err);
         reject(err);
       } else {
-        console.log('Data inserted successfully.');
         resolve(results);
       }
     });
   });
 }
 
-async function ejemploInsertarDatos() {
-  try {
-    await conectarDB(); // Conectarse a la base de datos
-    
-    // Insertar un usuario de ejemplo
-    const nombre = 'Noe';
-    const apellido = 'Rios';
-    const email = 'ejemplo@correo.com';
-    
-    await insertarDatos(nombre, apellido, email);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
-
 module.exports = {
-    ejemploInsertarDatos
+  insertarDatos
   };
