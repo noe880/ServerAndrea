@@ -51,9 +51,6 @@ async function ejemploInsertarDatos() {
     const email = 'ejemplo@correo.com';
     
     await insertarDatos(nombre, apellido, email);
-    
-    // Cerrar la conexión después de insertar los datos
-    connection.end();
   } catch (error) {
     console.error('Error:', error);
   }
