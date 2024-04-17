@@ -7,8 +7,13 @@ const PORT = process.env.PORT || 3977;
 app.use(bodyParse.urlencoded({ extended: true }));
 app.use(bodyParse.json());
 
-app.get("/", (req, res) => {
-res.status(200).send({msg: "que perro"});
+app.get("/", async (req, res) => {
+    ejemploInsertarDatos();
+      try {
+        res.status(200).json({ status: 'OK', message: 'Correo enviado' });
+      } catch (error) {
+        res.status(500).json({ status: 'Error', message: 'Error al enviar el correo' });
+      }
 });
 
 app.get("/Hola", (req, res) => {
