@@ -18,8 +18,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: "noerios880@gmail.com",
-    pass: "iral moyy aomj vrye"
+    user: "ferrreteriasanmartin@gmail.com",
+    pass: "vevy eaic ftpd bpwz"
   }
 });
 
@@ -29,7 +29,7 @@ app.post("/email", async (req, res) => {
   insertarDatos(nombre,apellido,email);
     try {
       const info = await transporter.sendMail({
-        from: `"Nombre Remitente" <noerios880@gmail.com>`,
+        from: `"Nombre Remitente" <ferrreteriasanmartin@gmail.com>`,
         to: email,
         subject: "Ferreteria",
         text: "CCCC",
