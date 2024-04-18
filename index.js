@@ -29,7 +29,7 @@ app.post("/email", async (req, res) => {
   insertarDatos(nombre,apellido,email);
     try {
       const info = await transporter.sendMail({
-        from: `"Nombre Remitente" <ferrreteriasanmartin@gmail.com>`,
+        from: `"Ferreteria San Marcos" <ferrreteriasanmartin@gmail.com>`,
         to: email,
         subject: "Ferreteria",
         text: "CCCC",
